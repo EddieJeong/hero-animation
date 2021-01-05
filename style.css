@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap');
 
 :root {
   --primary-color: #22b4a6;
@@ -51,6 +51,7 @@ html {
   border-radius: 3rem;
   display: flex;
   align-items: center;
+  margin: 1rem 0;
 }
 .search__input {
   border: none;
@@ -73,11 +74,130 @@ html {
 .search__icon--microphone {
   padding: 1em 1.2rem;
 }
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.category::-webkit-scrollbar {
+  display: none;
+}
+.category__text {
+  margin-right: 2em;
+}
+.category__text--selected {
+  font-weight: bold;
+}
+
+.HorizontalList {
+  margin: 0 -1.5rem;
+  padding: 1rem 0;
+  /* display: flex;
+  flex-wrap: nowrap; */
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.HorizontalList::-webkit-scrollbar {
+  display: none;
+}
+.HorizontalList__wrapper {
+  /* position: absolute; */
+  left: 0;
+  top: 0;
+  display: flex;
+  width: auto;
+  align-items: center;
+  padding: 1em;
+}
+.padding {
+  display: inline-block;
+  padding: 1em;
+  width: 60%;
+}
+.padding:nth-child(1) {
+  margin-left: 0.5rem;
+}
+.padding:nth-last-child(1) {
+  margin-right: 0.5rem;
+}
+.card {
+  /* flex-basis: 60%;
+  width: 100%; */
+  flex: 0 0 auto;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  color: white;
+  padding: 1em;
+  box-shadow: 0 12px 1.2rem rgba(0, 0, 0, 0.2);
+}
+.card__padding {
+  padding: 0.5rem;
+}
+.card__image {
+  width: 100%;
+  padding-top: 150%;
+  background-image: url('/assets/plant_01.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(0 6px 4px rgba(0, 0, 0, 0.2));
+}
+.card__category {
+  font-size: 0.9rem;
+  font-weight: 200;
+}
+.card__flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.3rem 0 0.5rem;
+}
+.card__product-name {
+  white-space: nowrap;
+  flex-grow: 1;
+  font-size: 1.1rem;
+}
+.card__price {
+  font-size: 0.7rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 5rem;
+  color: var(--primary-color);
+  background-color: white;
+  justify-self: flex-end;
+}
 
 img.image {
   display: block;
   width: 50%;
   flex-shrink: 1;
+}
+.recommend {
+  margin-top: 0.5rem;
+}
+.recommend__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recommend__title {
+  font-size: 1.2rem;
+}
+.recommend__dots {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1.4rem;
+  margin-right: 0.5rem;
+}
+.dot {
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 1rem;
+  background-color: var(--text-color);
 }
 
 /* .image {
